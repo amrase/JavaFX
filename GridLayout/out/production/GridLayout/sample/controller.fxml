@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="sample.Controller"
+          alignment="center" vgap="10" hgap="10">
+    <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="Click me">
+    <graphic>
+        <ImageView>
+            <Image url="@/TipOfTheDay24.gif"/>
+        </ImageView>
+    </graphic>
+    </Button>
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="1" text="This is a label,This is a label,This is a label,This is a label"
+            textFill="blue" wrapText="true">
+        <font>
+            <Font name="Arial italic" size="12"/>
+        </font>
+
+        <graphic>
+            <ImageView>
+                <Image url="@/TipOfTheDay24.gif"/>
+            </ImageView>
+        </graphic>
+
+    </Label>
+    <fx:define >
+        <ToggleGroup fx:id="colorToggleGroup"/>
+    </fx:define>
+    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="2" text="Red" toggleGroup="$colorToggleGroup" selected="true"/>
+    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="3" text="Blue" toggleGroup="$colorToggleGroup"/>
+    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="4" text="Green" toggleGroup="$colorToggleGroup"/>
+
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="5">
+        <CheckBox text="Dog" />
+        <CheckBox text="Cat"/>
+        <CheckBox text="Bird"/>
+    </VBox>
+
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="6">
+        <ToggleButton text="Toggle Button 1" />
+        <ToggleButton text="Toggle Button 2" />
+        <ToggleButton text="Toggle Button 3" />
+    </HBox>
+
+    <VBox GridPane.rowIndex="1" GridPane.columnIndex="0">
+        <RadioButton text="Dog" />
+        <RadioButton text="Cat"/>
+        <RadioButton text="Bird"/>
+    </VBox>
+
+    <TextField GridPane.rowIndex="2" GridPane.columnIndex="0" />
+    <PasswordField GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <ComboBox GridPane.rowIndex="2" GridPane.columnIndex="2" GridPane.columnSpan="4">
+        <items>
+            <FXCollections fx:factory="observableArrayList" >
+                <String fx:value="Option 1" />
+                <String fx:value="Option 2"/>
+                <String fx:value="Option 3"/>
+                <String fx:value="Option 4"/>
+                <String fx:value="Option 5"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+
+
+</GridPane>
