@@ -77,7 +77,7 @@
             <String fx:value="Option 1"/>
         </value>
     </ComboBox>
-    <ChoiceBox GridPane.rowIndex="3" GridPane.columnIndex="0" >
+    <ChoiceBox GridPane.rowIndex="2" GridPane.columnIndex="5" >
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <String fx:value="cb 1"/>
@@ -88,7 +88,27 @@
             </FXCollections>
         </items>
     </ChoiceBox>
+    <Slider GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="4" min="0" max="100"
+        showTickLabels="true" showTickMarks="true" minorTickCount="4" snapToTicks="true" />
+    <Spinner GridPane.rowIndex="2" GridPane.columnIndex="6" min="0" max="100" editable="true" initialValue="50"/>
 
+    <ColorPicker GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <DatePicker GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+    <Accordion GridPane.rowIndex="1" GridPane.columnIndex="4" GridPane.columnSpan="2"
+    expandedPane="$tp3"
+    >
+        <panes>
+            <TitledPane text="Titled Pane">
+                <Label text="Label for title pane"/>
+            </TitledPane>
+            <TitledPane text="Titled Pane2">
+                <Label text="Label2 for title pane"/>
+            </TitledPane>
+            <TitledPane text="Titled Pane3" fx:id="tp3">
+                <Label text="Label3 for title pane"/>
+            </TitledPane>
+        </panes>
+    </Accordion>
 
 
 </GridPane>
