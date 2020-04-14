@@ -24,6 +24,7 @@
               onAction="#handleChange"
 
     />
+    <Label fx:id="ourLabel" text="Nothing has happened" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
 
 
 </GridPane>
