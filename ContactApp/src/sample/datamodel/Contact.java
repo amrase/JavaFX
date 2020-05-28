@@ -15,6 +15,10 @@ public class Contact {
         this.notes.set(notes);
     }
 
+    public Contact() {
+
+    }
+
     public String getFirstName() {
         return firstName.get();
     }
@@ -61,5 +65,15 @@ public class Contact {
 
     public void setNotes(String notes) {
         this.notes.set(notes);
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "firstName=" + firstName +
+                ", lastName=" + lastName +
+                ", phoneNumber=" + phoneNumber +
+                ", notes=" + notes +
+                '}';
     }
 }
